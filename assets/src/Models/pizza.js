@@ -10,10 +10,10 @@ module.exports = (sequelize, DataTypes) => {
        
       },
       varients: {
-        type: DataTypes.STRING
+        type: DataTypes.JSON
       },
       prices: {
-        type: DataTypes.STRING
+        type: DataTypes.JSON
       },
       category: {
         type: DataTypes.STRING

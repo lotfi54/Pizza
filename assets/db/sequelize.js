@@ -29,8 +29,8 @@ const initDb = () => {
       pizzas.map(pizza =>{
           Pizza.create({
               name: pizza.name,
-              varients: pizza.varients.join(),
-              prices: pizza.prices.join(),
+              varients: pizza.varients,
+              prices: pizza.prices,
               category: pizza.category,
               image: pizza.image,
               description: pizza.description,              
