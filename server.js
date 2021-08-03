@@ -16,6 +16,8 @@ const { initDb } = require('./assets/db/sequelize')
     // sequelize.initDb()    
 
     // require('./assets/routes/swager')(app)
+    require('./assets/routes/userRoute')(app)
+    require('./assets/routes/ordersRoute')(app)
     require('./assets/routes/finAllPizza')(app)
     require('./assets/routes/finPizzaByid')(app)
 

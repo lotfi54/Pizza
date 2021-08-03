@@ -1,8 +1,13 @@
 const { Sequelize, DataTypes } = require('sequelize')
 const pizzaModel = require('../src/Models/pizza')
+const userModel = require('../src/Models/userModel')
+const orderModel = require('../src/Models/orderModel')
+
 const pizzas = require ('../../pizzasdata')
 
-const sequelize = new Sequelize('kymco', 'root', '', {
+
+
+const sequelize = new Sequelize('pizza', 'root', '', {
     host: 'localhost',
     PORT: 3306,
     dialect: 'mariadb',
@@ -22,6 +27,8 @@ const sequelize = new Sequelize('kymco', 'root', '', {
 
   
   const Pizza = pizzaModel(sequelize,DataTypes)
+  const User = userModel(sequelize,DataTypes)
+  const Order = orderModel(sequelize,DataTypes)
   
 const initDb = () => {
   return sequelize.sync({force:true})
@@ -42,5 +49,5 @@ const initDb = () => {
 }
   
 module.exports = { 
-  initDb, Pizza
+  initDb, Pizza, User, Order
 }
